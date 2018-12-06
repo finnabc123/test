@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card>
+    Selected List
+  </mat-card>
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Profile: </th>
+        <td mat-cell *matCellDef="let element"><span class="mobile-label">Profile:</span> <img class="imageView p-1" [src]="element.symbol"/> </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="full_name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> <span class="mobile-label">Name:</span> {{element.full_name}} </td>
+      </ng-container>
+
+      <!-- Country Column -->
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let element"> <span class="mobile-label">Country:</span> {{element.country}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" style="display: none;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="button-row text-right mt-2">
+    <button mat-raised-button (click)="gotoUsagerList()" >
+      Back
+    </button>
+  </div>
+</mat-card>

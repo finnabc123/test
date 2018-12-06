@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Structure */
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .mobile-label {
+    display: none;
+  }
+
+  .mat-row.hovered {
+    background: #eee;
+  }
+  
+  .mat-row.highlighted {
+    background: #999;
+  }
+
+  @media(max-width: 600px) {
+    .mobile-label {
+      width: 80px;
+      display: inline-block;
+      font-weight: bold;
+    }
+  
+    .mat-header-row {
+      display: none;
+    }
+  
+    .mat-row { 
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      /* padding: 8px 24px; */
+      border-bottom-width: 1px;
+      /* border-bottom-style: solid; */
+      border-bottom-color: rgba(0,0,0,.12);
+    }
+
+   .mat-row .mat-cell {
+     width: 100%;  
+     padding: 8px 19px !important;
+     min-height:45px;
+      border-bottom:none;
+    }
+
+    .mat-table tr.mat-row:not(:last-child) { border-bottom: 1px solid #ddd; }
+
+    tr.mat-footer-row, tr.mat-row { height: auto; }
+
+   .mat-table td.mat-cell:first-of-type,
+   .mat-table td.mat-footer-cell:first-of-type,
+   .mat-table th.mat-header-cell:first-of-type{
+      padding-left: 0;
+    }
+    td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+      border-bottom-style: none
+    }
+    .mat-table tr.mat-footer-row,
+    .mat-table tr.mat-row { height: auto; }
+  }
+
+  .imageView{
+    border-radius: 100%;
+    width: 10%
+  }
